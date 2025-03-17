@@ -1,0 +1,68 @@
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%; /* Make the image fill the container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+/* إزالة أي تأثير للأسهم في الـ CSS */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+/* إخفاء الـ pseudo-elements الخاصة بالأسهم (إذا كانت تستخدم) */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+/* Additional styling for background overlay */
+.bgoverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(59, 130, 246, 0.5);
+  z-index: 1;
+}
+
+.swiperImage {
+  width: 100%; /* Make the image responsive */
+  height: 100%; /* Ensure the image covers the container */
+  object-fit: cover; /* Cover the space with the image without stretching */
+  z-index: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .swiper-slide img {
+    height: 70vh; /* Reduce image height on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide img {
+    height: 60vh; /* Further reduce image height on smaller screens */
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-slide img {
+    height: 50vh; /* Further adjust image height for small screens */
+  }
+}
